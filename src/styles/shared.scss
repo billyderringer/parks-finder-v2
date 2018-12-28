@@ -1,10 +1,73 @@
 @import "reset.min";
+@import "breakpoints";
+@import "flexbox";
 @import "colors";
+@import "animations";
 
 body{
-  background-color: $ice;
+  @media (max-width: $tablet-max) {
+    background: url("../assets/forest-evergreens-xs.jpg") bottom no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
 }
 
-h1{
-  color: $sage;
+
+//main-header stuff
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  .header-icon{
+    fill: $snow;
+    max-width: 50px;
+  }
+  h3{
+    color: $snow;
+    font-size: 1rem;
+    font-weight: 100;
+    letter-spacing: .05rem;
+  }
 }
+
+//displays loader stuff (in <Body/>)
+//splash screen
+.app-loader{
+  flex-direction: column;
+  text-align: center;
+  height: 80vh;
+  .body-text{
+    color: $snow;
+    font-size: 1.5rem;
+    margin-top: 150px;
+  }
+  #title-bottom{
+    font-size: 3rem;
+  }
+}
+
+footer{
+  height: 10vh;
+}
+
+//displays load status stuff (in <Footer/>)
+//splash screen
+//orange theme
+.bg-orange{
+  background-color: $rust;
+}
+
+.status-white{
+  font-size: 1.1rem;
+  font-weight: 100;
+  color: $snow;
+}
+
+//blue theme
+.bg-blue{
+  background-color: $drab;
+}
+
+
+

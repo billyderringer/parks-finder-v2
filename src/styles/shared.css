@@ -48,10 +48,89 @@ table {
 html, input, select, textarea, button, a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
-body {
-  background-color: #F0F3F4; }
+.flex {
+  display: flex; }
 
-h1 {
-  color: #87BCBF; }
+.center-all {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.center-align {
+  align-items: center; }
+
+.center-justify {
+  justify-content: center; }
+
+@keyframes pulse {
+  50% {
+    background: #D97D54; } }
+.loading-pulse {
+  position: relative;
+  width: 1.3333333333vh;
+  height: 8vh;
+  background: rgba(217, 125, 84, 0.2);
+  animation: pulse 750ms infinite;
+  animation-delay: 250ms; }
+  .loading-pulse:before, .loading-pulse:after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 5.3333333333vh;
+    width: 1.3333333333vh;
+    background: rgba(217, 125, 84, 0.2);
+    top: 50%;
+    transform: translateY(-50%);
+    animation: pulse 750ms infinite; }
+  .loading-pulse:before {
+    left: -2.6666666667vh; }
+  .loading-pulse:after {
+    left: 2.6666666667vh;
+    animation-delay: 500ms; }
+
+@media (max-width: 991px) {
+  body {
+    background: url("../assets/forest-evergreens-xs.jpg") bottom no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover; } }
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh; }
+  header .header-icon {
+    fill: #FFF;
+    max-width: 50px; }
+  header h3 {
+    color: #FFF;
+    font-size: 1rem;
+    font-weight: 100;
+    letter-spacing: .05rem; }
+
+.app-loader {
+  flex-direction: column;
+  text-align: center;
+  height: 80vh; }
+  .app-loader .body-text {
+    color: #FFF;
+    font-size: 1.5rem;
+    margin-top: 150px; }
+  .app-loader #title-bottom {
+    font-size: 3rem; }
+
+footer {
+  height: 10vh; }
+
+.bg-orange {
+  background-color: #D97D54; }
+
+.status-white {
+  font-size: 1.1rem;
+  font-weight: 100;
+  color: #FFF; }
+
+.bg-blue {
+  background-color: #324755; }
 
 /*# sourceMappingURL=shared.css.map */
