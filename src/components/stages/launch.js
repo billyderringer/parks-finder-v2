@@ -15,7 +15,7 @@ function Launch(props) {
         </section>
         <Footer footerClass="bg-orange center-all"
                 stageTextClass="status-white"
-                message="Loading App" />
+                message="Loading App " />
       </React.Fragment>
     )
 }

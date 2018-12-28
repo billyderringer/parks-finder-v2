@@ -88,6 +88,32 @@ html, input, select, textarea, button, a {
     left: 2.6666666667vh;
     animation-delay: 500ms; }
 
+@keyframes loadingKey {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+.loading-fade .dots {
+  animation-name: loadingKey;
+  animation-duration: 750ms;
+  animation-iteration-count: infinite;
+  animation-direction: normal; }
+
+.dots {
+  margin: 0 2px;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-top: -5px; }
+
+.dot-1 {
+  animation-delay: .48s; }
+
+.dot-2 {
+  animation-delay: .6s; }
+
+.dot-3 {
+  animation-delay: .72s; }
+
 @media (max-width: 991px) {
   body {
     background: url("../assets/forest-evergreens-xs.jpg") bottom no-repeat;
@@ -105,7 +131,6 @@ header {
   header h3 {
     color: #FFF;
     font-size: 1rem;
-    font-weight: 100;
     letter-spacing: .05rem; }
 
 .app-loader {
@@ -126,8 +151,8 @@ footer {
   background-color: #D97D54; }
 
 .status-white {
-  font-size: 1.1rem;
-  font-weight: 100;
+  font-size: 1rem;
+  font-variant: small-caps;
   color: #FFF; }
 
 .bg-blue {

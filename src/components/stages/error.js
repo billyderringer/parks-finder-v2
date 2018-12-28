@@ -15,7 +15,7 @@ function Error(props) {
       </section>
       <Footer  footerClass="bg-orange center-all"
                stageTextClass="status-white"
-               message="Please Reload" />
+               message="Please Reload " />
     </React.Fragment>
   )
 }

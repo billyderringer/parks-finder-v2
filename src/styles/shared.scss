@@ -26,7 +26,6 @@ header{
   h3{
     color: $snow;
     font-size: 1rem;
-    font-weight: 100;
     letter-spacing: .05rem;
   }
 }
@@ -59,8 +58,8 @@ footer{
 }
 
 .status-white{
-  font-size: 1.1rem;
-  font-weight: 100;
+  font-size: 1rem;
+  font-variant: small-caps;
   color: $snow;
 }
 

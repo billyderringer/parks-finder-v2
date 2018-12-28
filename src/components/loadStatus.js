@@ -1,10 +1,15 @@
 import React from 'react'
+import Dots from "./stages/dots"
 
 function LoadStatus(props) {
   return (
-    <h6 className={props.customClass}>
-      {props.message}
-    </h6>
+    <div className="center-all">
+      <h6 className={props.customClass}>
+        {props.message}
+      </h6>
+      <Dots />
+    </div>
+
   )
 }
 
