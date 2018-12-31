@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import Fullscreen from 'react-full-screen'
 import axios from 'axios'
 import Header from "./header"
 import Body from "./body"
@@ -7,13 +8,20 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      location: 'tx'
+      location: 'tx',
+      isFull: false
     }
-    this.getParks = this.getParks.bind(this);
+    this.toggleFull = this.toggleFull.bind(this)
+    this.getParks = this.getParks.bind(this)
   }
 
   componentDidMount() {
     //this.getParks(this.state.location)
+  }
+
+  toggleFull() {
+    this.setState({isFull: !this.state.isFull})
+    console.log("toggled")
   }
 
   getParks(location) {
@@ -44,10 +52,12 @@ class App extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        <Header />
-        <Body />
-      </React.Fragment>
+      <Fullscreen enabled={this.state.isFull}
+                  onChange={isFull => this.setState({isFull})}>
+        <div className="fullscreen-enabled">
+          <Body toggleFull={this.toggleFull}/>
+        </div>
+      </Fullscreen>
     )
   }
 }

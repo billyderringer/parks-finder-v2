@@ -12,13 +12,22 @@ body{
   }
 }
 
+//fullscreen stuff
+.fullscreen-enabled{
+  @media (max-width: $tablet-max) {
+    background: url("../assets/forest-evergreens-xs.jpg") bottom no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+}
 
 //main-header stuff
 header{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 10vh;
+  padding: 0 3vw 0 5vw;
   .header-icon{
     fill: $snow;
     max-width: 50px;
@@ -27,6 +36,12 @@ header{
     color: $snow;
     font-size: 1rem;
     letter-spacing: .05rem;
+  }
+  .header-right{
+    button{
+      padding: 10px;
+      border: 1px solid $snow;
+    }
   }
 }
 
@@ -61,6 +76,10 @@ footer{
   font-size: 1rem;
   font-variant: small-caps;
   color: $snow;
+}
+
+.fill-white{
+  fill: $snow;
 }
 
 //blue theme

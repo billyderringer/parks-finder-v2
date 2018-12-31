@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Dots(props) {
+function DotsLoader(props) {
   return (
     <h6 className="center-all status-white loading-fade">
       <span className="dots dot-1">.</span>
@@ -10,4 +10,4 @@ function Dots(props) {
   )
 }
 
-export default Dots
+export default DotsLoader

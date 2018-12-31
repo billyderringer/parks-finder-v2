@@ -1,13 +1,13 @@
 import React from 'react'
 import Footer from "../footer"
+import Header from "../header";
 
 function Location(props) {
   return (
     <React.Fragment>
       <section className="app-loader bg-orange center-all">
         <select>
-          <option selected disabled>Choose Location</option>
-          <option value="TX">Tx</option>
+          <option value="TX">Texas</option>
         </select>
       </section>
       <Footer footerClass="bg-blue center-all"

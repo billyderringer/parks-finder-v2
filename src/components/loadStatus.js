@@ -1,5 +1,5 @@
 import React from 'react'
-import Dots from "./stages/dots"
+import DotsLoader from "./stages/dotsLoader"
 
 function LoadStatus(props) {
   return (
@@ -7,7 +7,7 @@ function LoadStatus(props) {
       <h6 className={props.customClass}>
         {props.message}
       </h6>
-      <Dots />
+      <DotsLoader />
     </div>
 
   )

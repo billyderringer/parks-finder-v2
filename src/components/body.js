@@ -3,6 +3,7 @@ import Loader from "./loader"
 import Launch from "./stages/launch"
 import Error from "./stages/error"
 import Location from "./stages/location"
+import Header from "./header";
 
 class Body extends Component {
   constructor(props) {
@@ -18,11 +19,21 @@ class Body extends Component {
       (() => {
         switch (stage) {
           case 'launch':
-            return <Launch />
+            return <React.Fragment>
+              <Header toggleFull={this.props.toggleFull}/>
+              <Launch />
+            </React.Fragment>
           case 'location':
-            return <Location />
+            return <React.Fragment>
+              <Header toggleFull={this.props.toggleFull}
+                      customClass="bg-blue"/>
+              <Location />
+            </React.Fragment>
           default:
-            return <Error />
+            return <React.Fragment>
+              <Header toggleFull={this.props.toggleFull}/>
+              <Error />
+            </React.Fragment>
         }
       })()
     )

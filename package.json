@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
+    "font-awesome": "^4.7.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-full-screen": "^0.2.3",
