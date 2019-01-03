@@ -1,9 +1,10 @@
 import React, {Component} from 'react'
-import Loader from "./loader"
 import Launch from "./stages/launch"
 import Error from "./stages/error"
 import Location from "./stages/location"
 import Header from "./header";
+import LoadingData from "./stages/loadingData"
+import Results from "./stages/results"
 
 class Body extends Component {
   constructor(props) {
@@ -14,6 +15,13 @@ class Body extends Component {
     this.bodyRender = this.bodyRender.bind(this)
   }
 
+  componentDidMount() {
+    setTimeout(() =>
+        this.setState({stage: 'location'})
+      , 2000)
+  }
+
+  //Used for switching page layouts
   bodyRender(stage) {
     return (
       (() => {
@@ -29,6 +37,16 @@ class Body extends Component {
                       customClass="bg-blue"/>
               <Location />
             </React.Fragment>
+          case 'data':
+            return <React.Fragment>
+              <Header toggleFull={this.props.toggleFull}/>
+              <LoadingData />
+            </React.Fragment>
+          case 'results':
+            return <React.Fragment>
+              <Header toggleFull={this.props.toggleFull}/>
+              <Results />
+          </React.Fragment>
           default:
             return <React.Fragment>
               <Header toggleFull={this.props.toggleFull}/>

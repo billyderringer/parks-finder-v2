@@ -163,6 +163,16 @@ header {
 footer {
   height: 10vh; }
 
+select {
+  padding: 5px; }
+
+#btn-state-search {
+  border-radius: 5px;
+  padding: 5px 20px;
+  margin-top: 15px;
+  background-color: #6E8CA0;
+  color: #FFF; }
+
 .bg-orange {
   background-color: #D97D54; }
 

@@ -67,7 +67,20 @@ footer{
 
 //displays load status stuff (in <Footer/>)
 //splash screen
-//orange theme
+
+select{
+  padding: 5px;
+
+}
+
+#btn-state-search{
+  border-radius: 5px;
+  padding: 5px 20px;
+  margin-top: 15px;
+  background-color: $slate;
+  color: $snow;
+}
+
 .bg-orange{
   background-color: $rust;
 }

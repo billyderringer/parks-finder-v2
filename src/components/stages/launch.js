@@ -1,7 +1,6 @@
 import React from 'react'
 import Loader from "../loader"
 import Footer from "../footer"
-import Header from "../header"
 
 function Launch(props) {
     return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import DotsLoader from "./stages/dotsLoader"
+import DotsLoader from "./dotsLoader"
 
 function LoadStatus(props) {
   return (
