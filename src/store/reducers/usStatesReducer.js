@@ -65,6 +65,10 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
   switch(action.type) {
+    case 'UPDATE_STAGE':
+      return Object.assign({}, state,{
+        currentStage: action.stage
+      })
     case 'UPDATE_LOCATION':
       return Object.assign({}, state,{
         currentLocation: {
@@ -73,7 +77,6 @@ const reducer = (state = initialState, action) => {
         }
       })
     case 'UPDATE_DATA':
-      console.log(action)
       const stage = action.stage ?
         action.stage : state.stage
       return Object.assign({}, state,{

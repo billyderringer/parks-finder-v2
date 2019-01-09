@@ -15,7 +15,7 @@ function Header(props) {
         <button onClick={props.toggleFull}
                 className="bg-blue">
           <FullscreenIcon customClass="fill-white"
-                          iconDimensions="3vh"/>
+                          iconDimensions="2vh"/>
           </button>
       </div>
     </header>

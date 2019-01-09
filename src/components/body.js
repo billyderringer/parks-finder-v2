@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {connect} from 'react-redux'
 import Launch from "./stages/launch"
 import Error from "./stages/error"
 import Location from "./stages/location"
@@ -9,15 +10,12 @@ import Results from "./stages/results"
 class Body extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      stage: 'launch'
-    }
     this.bodyRender = this.bodyRender.bind(this)
   }
 
   componentDidMount() {
     setTimeout(() =>
-        this.setState({stage: 'location'})
+        this.props.updateStage('location')
       , 2000)
   }
 
@@ -61,10 +59,25 @@ class Body extends Component {
 
     return (
       <React.Fragment>
-        {this.bodyRender(this.state.stage)}
+        {this.bodyRender(this.props.states.currentStage)}
       </React.Fragment>
     )
   }
 }
 
-export default Body
+const mapStateToProps = (state) => {
+  return{
+    states: state.usStatesReducer
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    updateStage: (stage) => {
+      const action = {type: 'UPDATE_STAGE', stage}
+      dispatch(action)
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Body)

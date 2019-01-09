@@ -13,7 +13,6 @@ class ApiData {
                 data.type)
             })
             .then(res => {
-              console.log(resParks.data.data)
               cb(resParks.data.data)
             })
             .catch(err => {
