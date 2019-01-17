@@ -1,10 +1,8 @@
 import { createStore, combineReducers } from 'redux'
-import apiDataReducer from './reducers/apiDataReducer'
 import usStatesReducer from './reducers/usStatesReducer'
 
 const reducer = combineReducers({
-  usStatesReducer,
-  apiDataReducer
+  usStatesReducer
 })
 
 const store = createStore(

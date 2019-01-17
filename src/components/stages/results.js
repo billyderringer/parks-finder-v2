@@ -10,19 +10,29 @@ class Results extends Component {
     const props = this.props.states
     const renderParks = props.currentLocationData ?
       props.currentLocationData.map((park, i) => {
-        return <div key={i}>
-          <img src={park.images[0]?
-            park.images[0].url + "?width=150&quality=90"
-            :"https://www.nps.gov/common/uploads/grid_builder/akr/crop16_9/EC9EA7D1-1DD8-B71B-0B1C5E81368CC585.jpg?width=150&quality=90"} alt="Not found"/>
-          <h2>{park.fullName}</h2>
-          <a href={park.url} target="_blank">Visit Site</a>
+        return <div key={i} className="container-park" style={{backgroundImage:
+           park.images[0] ?
+            'url('
+             + park.images[0].url
+             + '?width=150&quality=90)' :
+             'url("https://www.nps.gov/common/uploads/grid_builder/akr/crop16_9/EC9EA7D1-1DD8-B71B-0B1C5E81368CC585.jpg?width=150&quality=90")'
+            }}>
+          <div className="park-overlay">{/*used for bg of park results*/}
+          </div>
+          <h2>{park.name}</h2>
         </div>
       }):
       //error receiving data
       this.props.updateStage('error')
     return (
       <section className="app-results">
-        {renderParks}
+        <div className="results-banner">
+          <h2>{props.currentLocation.name}</h2>
+          <h3><span>{props.currentLocationData.length}</span> Results Found</h3>
+        </div>
+        <div className="container-results">
+          {renderParks}
+        </div>
       </section>
     )
   }
