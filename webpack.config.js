@@ -39,7 +39,7 @@ module.exports = {
       template: './src/index.html'
     }),
     new CopyWebpackPlugin([
-      {from: './favicon.ico', to: './src/favicon.ico'}
+      {from: './favicon.ico'}
       ])
   ]
 }
