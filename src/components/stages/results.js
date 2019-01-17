@@ -21,6 +21,7 @@ class Results extends Component {
           </div>
           <h2>{park.name}</h2>
         </div>
+
       }):
       //error receiving data
       this.props.updateStage('error')
