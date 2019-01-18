@@ -38,6 +38,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html'
     }),
-    new FaviconsWebpackPlugin('logo.gif')
+    new FaviconsWebpackPlugin('./logo.gif')
   ]
 }
